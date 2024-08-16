@@ -25,7 +25,11 @@ Route::get('login/{driver}/callback', [LoginController::class,'handleProviderCal
  * Rutas admin
  */
 Route::group(['prefix' => 'admin','middleware' => ['role:Admin|Superadmin|Developer','auth']], function () {
-
+    Route::resource('capacitacionEstados', App\Http\Controllers\capacitacionEstadoController::class);
+    Route::resource('capacitacionTipos', App\Http\Controllers\capacitacionTipoController::class);
+    Route::resource('capacitacionClientes', App\Http\Controllers\capacitacionClienteController::class);
+    Route::resource('capacitacionModelos', App\Http\Controllers\capacitacionModeloController::class);
+    Route::resource('capacitacionMarcas', App\Http\Controllers\capacitacionMarcaController::class);
 
     Route::group(['as' => 'admin.'],function (){
 
@@ -96,4 +100,7 @@ Route::group(['prefix' => ''], function () {
 
 
 });
+
+
+
 
