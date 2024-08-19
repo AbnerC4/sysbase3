@@ -6,6 +6,48 @@ use Illuminate\Database\Eloquent\Model;
  use Illuminate\Database\Eloquent\SoftDeletes;
  use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * App\Models\capacitacionUser
+ *
+ * @property int $id
+ * @property string|null $username
+ * @property string $name
+ * @property string|null $email
+ * @property \Illuminate\Support\Carbon|null $email_verified_at
+ * @property string|null $password
+ * @property string|null $provider
+ * @property string|null $provider_uid
+ * @property string|null $remember_token
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\capacitacionServicio> $capacitacionServicios
+ * @property-read int|null $capacitacion_servicios_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Option> $option1s
+ * @property-read int|null $option1s_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Option> $options
+ * @property-read int|null $options_count
+ * @method static \Database\Factories\capacitacionUserFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser query()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereProvider($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereProviderUid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser whereUsername($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionUser withoutTrashed()
+ * @mixin \Eloquent
+ */
 class capacitacionUser extends Model
 {
 

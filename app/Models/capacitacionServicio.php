@@ -7,6 +7,52 @@ use Illuminate\Database\Eloquent\Model;
  use Illuminate\Database\Eloquent\SoftDeletes;
  use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * App\Models\capacitacionServicio
+ *
+ * @property int $id
+ * @property int $cliente_id
+ * @property int $estado_id
+ * @property int $equipo_id
+ * @property int $user_id
+ * @property string|null $precio
+ * @property \Illuminate\Support\Carbon $fecha_recepcion
+ * @property string $problema
+ * @property \Illuminate\Support\Carbon|null $fecha_diagnostico
+ * @property string|null $diagnostico
+ * @property \Illuminate\Support\Carbon|null $fecha_entrega
+ * @property string|null $solucion
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read \App\Models\capacitacionCliente $cliente
+ * @property-read \App\Models\capacitacionEquipo $equipo
+ * @property-read \App\Models\capacitacionEstado $estado
+ * @property-read \App\Models\User $user
+ * @method static \Database\Factories\capacitacionServicioFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio query()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereClienteId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereDiagnostico($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereEquipoId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereEstadoId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereFechaDiagnostico($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereFechaEntrega($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereFechaRecepcion($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio wherePrecio($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereProblema($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereSolucion($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|capacitacionServicio withoutTrashed()
+ * @mixin \Eloquent
+ */
 class capacitacionServicio extends Model
 {
 
@@ -31,11 +77,11 @@ class capacitacionServicio extends Model
 
     protected $casts = [
         'precio' => 'decimal:2',
-        'fecha_recepcion' => 'date',
+        'fecha_recepcion' => 'date: d-m-y',
         'problema' => 'string',
-        'fecha_diagnostico' => 'date',
+        'fecha_diagnostico' => 'date: d-m-y',
         'diagnostico' => 'string',
-        'fecha_entrega' => 'date',
+        'fecha_entrega' => 'date: d-m-y',
         'solucion' => 'string'
     ];
 

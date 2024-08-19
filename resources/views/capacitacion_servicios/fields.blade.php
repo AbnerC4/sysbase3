@@ -1,12 +1,12 @@
-<!-- Cliente Id Field --><div class="form-group col-sm-6">
+<!-- Cliente Id Field -->
+<div class="form-group col-sm-6">
     {!! Form::label('cliente_id', 'Asignar Cliente:') !!}
     <div class="form-group col-sm-12">
         {!! Form::select(
             'cliente_id',
-            \App\Models\CapacitacionCliente::select(DB::raw("CONCAT(nombres, ' ', apellidos) AS full_name, id"))
-            ->pluck('full_name', 'id')->prepend('SELECCIONE UNO..', ''),
+            select(\App\Models\capacitacionCliente::class,'texto'),
             null,
-            ['id' => 'cliente_id', 'class' => 'form-control col-sm-12', 'required'=>'required']
+            ['id' => 'cliente_id', 'class' => 'form-control col-sm-12']
         ) !!}
     </div>
 </div>
@@ -33,9 +33,7 @@
     <div class="form-group col-sm-12">
         {!! Form::select(
             'equipo_id',
-            \App\Models\CapacitacionEquipo::select(DB::raw("CONCAT
-            (numero_serie, ' / ', imei, ' / ', tipo_id, ' / ', marca_id) AS full_name, id"))
-            ->pluck('full_name', 'id')->prepend('SELECCIONE UNO..', ''),
+            select(\App\Models\capacitacionEquipo::class,'nombrecompleto'),
             null,
             ['id' => 'equipo_id', 'class' => 'form-control col-sm-12']
         ) !!}
