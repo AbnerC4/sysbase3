@@ -110,4 +110,5 @@ class capacitacionUser extends Model
     {
         return $this->belongsToMany(\App\Models\Option::class, 'user_shortcuts');
     }
+
 }

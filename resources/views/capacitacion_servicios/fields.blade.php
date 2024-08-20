@@ -41,26 +41,24 @@
 </div>
 
 <!-- user Field -->
-{{--<div class="form-group col-sm-6">--}}
-{{--    {!! Form::label('user_id', __('user_id')) !!}--}}
-{{--        {!! Form::text(--}}
-{{--            'username',--}}
-{{--            Auth::user()->name,--}}
-{{--            ['class' => 'form-control', 'readonly' => 'readonly']--}}
-{{--        ) !!}--}}
-{{--</div>--}}
-
 <div class="form-group col-sm-6">
-    {!! Form::label('user_id', 'Usuario:') !!}
-    <div class="form-group col-sm-12">
-        {!! Form::select(
-            'user_id',
-            select(\App\Models\CapacitacionUser::class, 'name'),
-            null,
-            ['id' => 'user_id', 'class' => 'form-control col-sm-12']
-        ) !!}
-    </div>
+    {!! Form::label('user_id', __('Username')) !!}
+    {!! Form::text('user_name', Auth::user()->name,
+    ['id'=>'user_name', 'class' => 'form-control', 'readonly' => 'readonly']) !!}
+    {!! Form::hidden('user_id', Auth::user()->id) !!}
 </div>
+
+{{--<div class="form-group col-sm-6">--}}
+{{--    {!! Form::label('user_id', 'Usuario:') !!}--}}
+{{--    <div class="form-group col-sm-12">--}}
+{{--        {!! Form::select(--}}
+{{--            'user_id',--}}
+{{--            select(\App\Models\CapacitacionUser::class, 'name'),--}}
+{{--            null,--}}
+{{--            ['id' => 'user_id', 'class' => 'form-control col-sm-12']--}}
+{{--        ) !!}--}}
+{{--    </div>--}}
+{{--</div>--}}
 
 <!-- Precio Field -->
 <div class="form-group col-sm-6">
