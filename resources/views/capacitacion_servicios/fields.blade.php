@@ -120,3 +120,8 @@
     {!! Form::label('solucion', 'Solucion:') !!}
     {!! Form::textarea('solucion', null, ['class' => 'form-control', 'maxlength' => 65535, 'maxlength' => 65535]) !!}
 </div>
+
+<div class="form-group col-sm-12">
+    {!! Form::label('observaciones', 'Observaciones:') !!}
+    {!! Form::textarea('observaciones', null, ['class' => 'form-control', 'maxlength' => 65535, 'maxlength' => 65535]) !!}
+</div>
