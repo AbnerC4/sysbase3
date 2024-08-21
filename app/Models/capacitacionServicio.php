@@ -126,5 +126,8 @@ class capacitacionServicio extends Model
         return $this->belongsTo(\App\Models\User::class, 'user_id');
     }
 
+    public  function  formatPrecio($precio){
+        return '$'.number_format($precio, 2, '.', ',');
+    }
 
 }

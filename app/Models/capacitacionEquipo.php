@@ -114,4 +114,9 @@ class capacitacionEquipo extends Model
 //        );
 //
 //    }
+
+
+
+
+
 }
